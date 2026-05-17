@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#1.Create a line plot for order_date vs sales amount
+df = pd.read_csv('sales_data_practice.csv')
+#Order_ID,Product,Region,Sales_Amount,Order_Date
+
+#Line plot - Order_Date vs Sales_Amount
+plt.plot(df['Order_Date'], df['Sales_Amount'])
+plt.title('Order Date VS Sales amount')
+plt.xlabel('Order  Date')
+plt.ylabel('Sales amount')
+plt.xticks(rotation=45)
+plt.grid()
+plt.show()
