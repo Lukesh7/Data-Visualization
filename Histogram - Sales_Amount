@@ -1,0 +1,7 @@
+#4.Create Histogram for Sales Amount
+#Histogram - Sales_Amount
+plt.figure(figsize = (8,5))
+plt.hist(df['Sales_Amount'], bins=10)
+plt.title('Histogram - Sales Amount')
+plt.grid()
+plt.show()
