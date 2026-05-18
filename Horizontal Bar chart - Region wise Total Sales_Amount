@@ -1,0 +1,10 @@
+#3.Create Horizontal Bar chart for region wise sales
+#Horizontal Bar chart - Region wise Total Sales_Amount
+region_sales = df.groupby('Region')['Sales_Amount'].sum()
+plt.figure(figsize = (8,5))
+plt.barh(region_sales.index, region_sales.values)
+plt.title('Horizontal Bar chart - Region wise Sales amount')
+plt.xlabel('Total Sales')
+plt.ylabel('Region')
+plt.grid()
+plt.show()
