@@ -1,0 +1,12 @@
+#7.Top 3 products
+top = df.groupby('Product')['Sales_Amount'].sum()
+top = top.sort_values(ascending = False)
+top = top.head(3)
+
+plt.figure(figsize = (8,5))
+plt.bar(top.index, top.values)
+plt.title('Top 3 products')
+plt.xlabel('Products')
+plt.ylabel('Total Sales')
+plt.xticks(rotation = 45)
+plt.show()
